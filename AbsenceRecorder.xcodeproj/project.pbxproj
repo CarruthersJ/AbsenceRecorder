@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB00003297B43BC004BF124 /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB00002297B43BC004BF124 /* Students.swift */; };
+		2CB00005297B4434004BF124 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB00004297B4434004BF124 /* Division.swift */; };
 		2CB0FFD7297B3D3A004BF124 /* AbsenceRecorderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0FFD6297B3D3A004BF124 /* AbsenceRecorderApp.swift */; };
 		2CB0FFD9297B3D3A004BF124 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB0FFD8297B3D3A004BF124 /* ContentView.swift */; };
 		2CB0FFDB297B3D3A004BF124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB0FFDA297B3D3A004BF124 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CB00002297B43BC004BF124 /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
+		2CB00004297B4434004BF124 /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
 		2CB0FFD3297B3D3A004BF124 /* AbsenceRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbsenceRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB0FFD6297B3D3A004BF124 /* AbsenceRecorderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsenceRecorderApp.swift; sourceTree = "<group>"; };
 		2CB0FFD8297B3D3A004BF124 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				2CB0FFD8297B3D3A004BF124 /* ContentView.swift */,
+				2CB00002297B43BC004BF124 /* Students.swift */,
+				2CB00004297B4434004BF124 /* Division.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CB00003297B43BC004BF124 /* Students.swift in Sources */,
 				2CB0FFD9297B3D3A004BF124 /* ContentView.swift in Sources */,
+				2CB00005297B4434004BF124 /* Division.swift in Sources */,
 				2CB0FFD7297B3D3A004BF124 /* AbsenceRecorderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
