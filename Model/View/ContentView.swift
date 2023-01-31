@@ -8,35 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    let divisionList = Division.examples
-    @State private var currentStudentIndex = 0
+    let divisionList: [Division]
+    @State private var currentDate: Date = Date()
     
     var body: some View {
-        let firstDivision = divisionList[0]
-        let currentStudent = firstDivision.students[currentStudentIndex]
-        let firstName = currentStudent.firstName
-        let surname = currentStudent.surname
-        let birthday = currentStudent.birthday
-        
-        VStack {
-            Form {
-                Text("This student is \(firstName) \(surname), \nand their birthday is \(birthday).")
-                    .frame(width: 200)
+        NavigationView {
+            List(divisionList, id: \.self.code) { division in
+                DivisionItem(division: division)
             }
-            Button("Next student") {
-                if currentStudentIndex < firstDivision.students.count - 1 {
-                    currentStudentIndex += 1
-                } else {
-                    currentStudentIndex = 0
+            .navigationTitle(currentDate.getShortDate())
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: { currentDate = currentDate.previousDay() }) {
+                        Image(systemName: "arrow.backward")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {currentDate = currentDate.nextDay() }) {
+                        Image(systemName: "arrow.forward")
+                    }
                 }
             }
         }
-        .padding()
     }
 }
+        
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(divisionList: Division.examples)
     }
 }
