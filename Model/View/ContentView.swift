@@ -20,12 +20,12 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { currentDate = currentDate.previousDay() }) {
-                        Image(systemName: "arrow.backward")
+                        Image(systemName: "arrowshape.left.fill")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {currentDate = currentDate.nextDay() }) {
-                        Image(systemName: "arrow.forward")
+                        Image(systemName: "arrowshape.right.fill")
                     }
                 }
             }
