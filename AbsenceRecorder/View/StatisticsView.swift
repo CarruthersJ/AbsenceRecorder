@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct StatisticsView: View {
+    @EnvironmentObject var state: StateController
     var body: some View {
-        TabView {
-            Text("Statistics View")
-            Image(systemName: "list.bullet.clipboard")
-        }
+        Text("Statistics View")
     }
 }
 
 struct StatisticsView_Previews: PreviewProvider {
     static var previews: some View {
         StatisticsView()
+            .environmentObject(StateController())
     }
 }

@@ -10,10 +10,15 @@ import SwiftUI
 struct RootTabView: View {
     var body: some View {
         TabView {
-            ContentView(divisionList: Division.examples)
+            DivisionsView()
                 .tabItem {
                     Image(systemName: "square.and.pencil.circle.fill")
                     Text("Absences")
+                }
+            StatisticsView()
+                .tabItem{
+                    Image(systemName: "list.bullet.clipboard")
+                    Text("Statistics")
                 }
         }
     }
