@@ -8,6 +8,7 @@
 import Foundation
 
 class Division {
+    var absences: [Absence] = []
     let code: String
     var students: [Student] = []
     
