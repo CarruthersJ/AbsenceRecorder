@@ -16,6 +16,25 @@ class Division {
         self.code = code
     }
     
+    func getAbsence(for date: Date) -> Absence? {
+        return absences.first {
+            let comparison = Calendar.current.compare($0.takenOn, to: date, toGranularity: .day)
+            return comparison == .orderedSame
+        }
+    }
+    
+    func createAbsenceOrGetExistingIfAvailable(for date: Date) -> Absence {
+        var returnAbsence: Absence
+        if let availableAbsence = getAbsence(for: date) {
+            returnAbsence = availableAbsence
+        } else {
+            let newAbsence = Absence(date: date, students: students)
+            absences.append(newAbsence)
+            returnAbsence = newAbsence
+        }
+        return returnAbsence
+    }
+    
     #if DEBUG
     static func createDivision(code: String, of size: Int) -> Division {
         let division = Division(code: code)
