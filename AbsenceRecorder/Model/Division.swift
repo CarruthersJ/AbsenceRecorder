@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Division {
+class Division: Codable {
     var absences: [Absence] = []
     let code: String
     var students: [Student] = []
