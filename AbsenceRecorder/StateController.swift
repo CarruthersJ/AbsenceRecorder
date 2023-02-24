@@ -24,7 +24,7 @@ class StateController: ObservableObject {
     
     func loadFromFile () {
         // get url to the file that you want to load from
-        let url = getPathToFile(fileName: "divisions.json")
+        let url = FileManager.default.getPathToFile(fileName: "divisions.json")
         if let data = try? Data(contentsOf: url) {
             let decoder = JSONDecoder()
             if let loaded = try? decoder.decode([Division].self, from: data) {
@@ -38,7 +38,7 @@ class StateController: ObservableObject {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(divisions) {
             if let json = String(data: encoded, encoding: .utf8) {
-                let url = getPathToFile(fileName: "divisions.json")
+                let url = FileManager.default.getPathToFile(fileName: "divisions.json")
                 do {
                     try json.write(to: url, atomically: true, encoding: .utf8)
                 } catch {

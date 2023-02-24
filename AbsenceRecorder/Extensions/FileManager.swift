@@ -8,9 +8,14 @@
 import Foundation
 
 extension FileManager {
-    private func getPathToFile() -> URL {
+    func getPathToFile(fileName: String) -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let userPath = paths[0]
-        return userPath
+        let url = userPath.appendingPathComponent(fileName)
+        return url
+    }
+    
+    func save() {
+        
     }
 }
